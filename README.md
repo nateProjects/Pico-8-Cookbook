@@ -5,6 +5,6 @@ Pico-8 Code Recipes
 
 [My Examples](examples)
 
-The start of a simple [Story Game Engine](examples/story)
+The start of a simple [Story Game Engine](examples/story-engine)
 
 [Others examples](examples/others)
