@@ -1,0 +1,48 @@
+pico-8 cartridge // http://www.pico-8.com
+version 4
+__lua__
+
+-- From https://gist.github.com/shaneriley/cae98eac6136e7293b28
+player = {}
+player.x = 5
+player.y = 5
+player.sprite = 0
+player.speed = 2
+
+function move()
+  player.moving = true
+  player.sprite += 1
+  if player.sprite > 2 then
+   player.sprite = 0
+  end
+end
+
+function _update()
+  player.moving = false
+
+  if btn(0) then
+    player.x -= player.speed
+    move()
+  end
+  if btn(1) then
+    player.x += player.speed
+    move()
+  end
+  if btn(2) then
+    player.y -= player.speed
+    move()
+  end
+  if btn(3) then
+    player.y += player.speed
+    move()
+  end
+  if not player.moving then
+    player.sprite = 0
+  end
+end
+
+function _draw()
+  cls()
+  spr(player.sprite, player.x, player.y)
+end
+
