@@ -21,3 +21,5 @@ end
 
 -- determine size
 print (#a)
+
+-- for additional information see - http://blog.headchant.com/arrays-in-pico-8/
