@@ -1,0 +1,38 @@
+--- From http://pico-8.wikia.com/wiki/Centering_Text
+
+textlabel="this is some cool text!!!"
+
+
+
+function hcenter(s)
+
+-- string length times the 
+
+-- pixels in a char's width
+
+-- cut in half and rounded down
+
+return 64-flr((#s*4)/2)
+
+end
+
+
+
+function vcenter(s)
+
+-- string char's height
+
+-- cut in half and rounded down
+
+return 64-flr(5/2)
+
+end
+
+
+function _draw()
+
+rectfill(0,0,128,128,0)
+
+print(textlabel,hcenter(textlabel),vcenter(textlabel),8)
+
+end

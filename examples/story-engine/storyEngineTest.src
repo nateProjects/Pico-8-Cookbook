@@ -1,0 +1,13 @@
+--picoStoryEngine
+
+-- Story Variables
+
+p = {
+{"bedroom","a small cot suffices.","use the loo",3,"lounge around",2,"",0,"",0},
+{"lounge","not much space to relax.","take a nap",1,"use the loo",3,"",0,"",0},
+{"bathroom","more like an in-house outhouse","take a nap",1,"lounge around",2,"",0,"",0}
+}
+
+print (p[1][1])
+print (p[1][2])
+

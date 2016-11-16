@@ -1,0 +1,13 @@
+pico-8 cartridge // http://www.pico-8.com
+version 7
+__lua__
+-- directions (for input)
+function _update()
+	if (btnp(0)) then print "left" end
+	if (btnp(1)) then print "right" end
+ 	if (btnp(2)) then print "up" end
+	if (btnp(3)) then print "down" end
+	if (btnp(4)) then print "z" end
+	if (btnp(5)) then print "x" end
+-- would use btn for an action game
+end	
