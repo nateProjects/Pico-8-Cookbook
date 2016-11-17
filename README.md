@@ -9,6 +9,8 @@ The start of a simple [Story Game Engine](examples/story-engine)
 
 [Others examples](examples/others)
 
+See the [Wiki](wiki) for excerpts yet to be added
+
 ## Templates
 
 * [Basic - ByronHulcher](https://gist.github.com/byronhulcher/73f7765cfdab5b6d4ae1f72b72714ef3)
