@@ -9,7 +9,7 @@ The start of a simple [Story Game Engine](examples/story-engine)
 
 [Others examples](examples/others)
 
-See the [Wiki](wiki) for excerpts yet to be added
+See the [Wiki](https://github.com/nate2squared/pico-8-cookbook/wiki) for excerpts yet to be added
 
 ## Templates
 
