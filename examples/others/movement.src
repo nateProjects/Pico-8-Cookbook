@@ -3,6 +3,8 @@ version 4
 __lua__
 
 -- From https://gist.github.com/shaneriley/cae98eac6136e7293b28
+-- MY ADDITIONS COMMENTED IN CAPS BELOW
+
 player = {}
 player.x = 5
 player.y = 5
@@ -22,10 +24,14 @@ function _update()
 
   if btn(0) then
     player.x -= player.speed
+-- FLIP SPRITE LEFT ADDED
+    player.direction = true
     move()
   end
   if btn(1) then
     player.x += player.speed
+-- FLIP SPRITE RIGHT ADDED
+    player.direction = false
     move()
   end
   if btn(2) then
@@ -43,6 +49,8 @@ end
 
 function _draw()
   cls()
-  spr(player.sprite, player.x, player.y)
+-- WAS spr(player.sprite, player.x, player.y)
+-- SCALE 1,1,DIRECTION ADDED
+  spr(player.sprite, player.x, player.y,1,1,player.direction)
 end
 
