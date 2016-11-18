@@ -53,4 +53,3 @@ function _draw()
 -- SCALE 1,1,DIRECTION ADDED
   spr(player.sprite, player.x, player.y,1,1,player.direction)
 end
-
