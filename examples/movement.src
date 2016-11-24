@@ -1,0 +1,23 @@
+xcoord = 16
+ycoord = 16
+
+function move()
+  moving = true
+end
+
+function _update()
+  moving = false
+  if btn(0) then
+    xcoord -= 1
+    move() 
+  end
+  if btn(1) then 
+    xcoord += 1
+    move() 
+  end
+end
+
+function _draw()
+  cls()
+  spr(1, xcoord, ycoord)
+end
