@@ -2,7 +2,7 @@
 
 * [Array Example](array.src)
 * [Rooms Array Example](story-engine/rooms.src)
-* [Directions Example](array.src)
+* [Directions Example](directions.src)
 * [Movement Example](array.src)
 
 ## Others Pico-8 Code Examples
