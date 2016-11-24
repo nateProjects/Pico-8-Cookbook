@@ -4,6 +4,7 @@
 * [Directions Example](directions.src)
 * [Movement Example](movement.src)
 
+**Arrays**
 * [Array Example](array.src)
 * [Rooms Array Example](story-engine/rooms.src)
 
