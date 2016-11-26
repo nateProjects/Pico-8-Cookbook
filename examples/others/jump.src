@@ -1,0 +1,14 @@
+-- adapted from tyroney - http://www.lexaloffle.com/bbs/?tid=3998
+player={x=64,y=64,dx=0,dy=0}
+gravity=1
+function _update()
+  if (btn(5)) player.dy=-4 --not quite a jump, more a "hold button to fly upwards"
+  player.y+=player.dy
+  player.dy=min(player.dy+gravity,4) --max fall speed of 4
+    --hard-coded ground level collision:
+  if (player.y>64) player.y=64 player.dy=0
+end
+function _draw()
+  cls()
+  spr(1,player.x,player.y)
+end
