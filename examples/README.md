@@ -12,3 +12,4 @@
 
 * [Center Text](others/center.src)
 * [Movement Example](others/movement.src)
+* [Jump Example](others/jump.src)
