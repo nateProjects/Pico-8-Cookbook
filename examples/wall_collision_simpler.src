@@ -1,0 +1,19 @@
+function _init()
+	world={w=128,h=128}
+	player={x=0,y=32,limit=true}
+end
+
+function _update()
+	cls()
+	move(player)
+	spr(0,player.x,player.y)
+end
+
+function move(pos)
+ local last={x=pos.x,y=pos.y}
+ local wall=false
+ if(btn(0)) pos.x-=1
+ if(btn(1)) pos.x+=1
+ if(pos.limit) wall=(pos.x<0 or pos.x+8>world.w or pos.y<0 or pos.y+8>world.h)
+ if(wall) pos.x=last.x
+end
