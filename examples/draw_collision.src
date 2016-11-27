@@ -1,0 +1,21 @@
+-- collision for drawn objects
+
+box1 = {x=30, y=30, w=40, h=40}
+-- change to w=20, h=20 to not collide
+box2 = {x=60, y=60, w=90, h=90}
+
+rectfill(box1.x, box1.y, box1.x+box1.w, box1.y+box1.h, 12)
+rectfill(box2.x, box2.y, box2.x+box2.w, box2.y+box2.h, 8)
+
+function _update()
+		if collides(box1,box2) then print "true" end -- test
+end
+
+-- object collision check
+function collides(obj1, obj2)
+  if(obj1.x < (obj2.x + obj2.w) and (obj1.x + obj1.w)  > obj2.x and obj1.y < (obj2.y + obj2.h) and (obj1.y + obj1.h) > obj2.y) then
+		return true
+	else
+		return false
+  end
+end
