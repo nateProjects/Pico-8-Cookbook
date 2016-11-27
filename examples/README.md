@@ -3,6 +3,7 @@
 * [Sprite Help](sprite.src.md)
 * [Directions Example](directions.src)
 * [Movement Example](movement.src)
+* [Box Collision](draw_collision.src)
 
 **Arrays**
 * [Array Example](array.src)
