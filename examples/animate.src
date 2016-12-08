@@ -1,0 +1,17 @@
+-- Test animation frames
+
+hero = {}
+hero.sprite = 0
+hero.frames = 8
+
+function _update()
+	hero.sprite += 1
+	if hero.sprite > hero.frames then
+ 	hero.sprite = 0
+	end
+end
+
+function _draw()
+	cls()
+ spr(hero.sprite, 10, 10)
+end
