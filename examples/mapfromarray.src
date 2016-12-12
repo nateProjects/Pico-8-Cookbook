@@ -1,0 +1,31 @@
+-- example map array - 7x7
+cls()
+level = {{2,2,2,2,2,2,2},
+				{2,0,0,0,0,0,2},
+				{2,2,2,0,0,2,2},
+				{2,0,0,0,0,0,2},
+				{2,2,0,2,2,2,2},
+				{2,0,0,0,0,0,2},
+				{2,2,2,2,2,2,2}}
+-- draw from array - set map data & display it
+for mapx = 1,7 do
+	for mapy = 1,7 do
+		mset(mapx,mapy,level[mapy][mapx])
+		map(mapx,mapy,mapx*8,mapy*8)
+	end
+end
+
+-- ---
+
+-- example text array - 5x5
+level = {{2,2,2,2,2},
+	{2,0,0,0,2},
+	{2,0,0,0,2},
+	{2,0,0,0,2},
+	{2,2,2,2,2}}
+-- display text in grid 
+for mapx = 1,5 do
+  for mapy = 1,5 do
+    print(level[mapx][mapy],mapx*8,mapy*8)
+  end
+end
