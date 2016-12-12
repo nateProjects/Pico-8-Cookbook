@@ -4,6 +4,7 @@
 - [Directions Example](directions.src)
 - [Animation Example](animate.src)
 - [Movement Example](movement.src)
+- [Map From Array](mapfromarray.src)
 - [Box Collision](draw_collision.src)
 - [Wall Collision - Basic](wall_collision_simpler.src) & [Function](wall_collision_function.src)
 
