@@ -13,6 +13,7 @@ See the [Wiki](https://github.com/nate2squared/pico-8-cookbook/wiki) for excerpt
 
 ## Templates
 
+* [Simple Explanation](https://geistpa.blogspot.com/p/pico-8-coding.html)
 * [Basic - ByronHulcher](https://gist.github.com/byronhulcher/73f7765cfdab5b6d4ae1f72b72714ef3)
 * [Collision - Ojdon](https://github.com/ojdon/pico8-boilerplate)
 * [Projects - JayMiner](https://github.com/jayminer81/pico8_project_template)
