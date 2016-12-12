@@ -1,11 +1,27 @@
 # Pico-8 Cookbook
 Pico-8 Code Recipes 
 
-**Examples**
+## My Pico-8 Code Examples
 
-[My Examples](examples)
+- [Sprite Help](examples/sprite.src.md)
+- [Directions Example](examples/directions.src)
+- [Animation Example](examples/animate.src)
+- [Movement Example](examples/movement.src)
+- [Map From Array](examples/mapfromarray.src)
+- [Box Collision](examples/draw_collision.src)
+- [Wall Collision - Basic](examples/wall_collision_simpler.src) & [Function](examples/wall_collision_function.src)
 
-The start of a simple [Story Game Engine](examples/story-engine)
+**Arrays**
+
+- [Array Example](examples/array.src)
+- [Rooms Array Example](examples/story-engine/rooms.src)
+
+## Others Pico-8 Code Examples
+
+- [Center Text](examples/others/center.src)
+- [Animate](examples/others/anim.p8)
+- [Movement Example](examples/others/movement.src)
+- [Jump Example](examples/others/jump.src)
 
 [Others examples](examples/others)
 
