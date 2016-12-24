@@ -13,11 +13,13 @@ for mapx = 0,6 do
 	-- add finding array size
 		mset(mapx,mapy,level[mapy+1][mapx+1])
 		-- arrays start from 1,1?
-		map(mapx,mapy,mapx*8,mapy*8)
-		if (level[mapy+1][mapx+1] > 0) fset(level[mapy+1][mapx+1],0,true)
+		-- map(mapx,mapy,mapx*8,mapy*8) Old version - too slow!
+		if (level[mapy+1][mapx+1] > 0) fset(level[mapy+1][mapx],0,true)
 		-- set to map sprite if not blank
 	end
 end
+map(0,0,0,0,16,16)
+-- change to allow for multiple levels
 
 -- ---
 
