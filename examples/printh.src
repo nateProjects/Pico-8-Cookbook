@@ -1,0 +1,25 @@
+-- example is currently missing initial variables, movement and draw code
+
+function _update()
+	move(hero)
+  adjacent(hero)
+end
+
+function adjacent(pos)
+  printh('Screen X '..pos.x..' / Y '..pos.y)
+-- at player location
+  target=mget(pos.x/pos.w,pos.y/pos.h)
+  printh ('target '..target)
+-- above player location
+  ceiling=mget(pos.x/pos.w,pos.y/pos.h-1)
+  printh('above '..ceiling)
+-- below player location
+  floor=mget(pos.x/pos.w,pos.y/pos.h+1)
+  printh ('floor '..floor)
+-- left of player location
+  left=mget(pos.x/pos.w-1,pos.y/pos.h)
+  printh ('left '..left)
+-- right of player location
+  right=mget(pos.x/pos.w+1,pos.y/pos.h)
+  printh ('right '..right)
+end
