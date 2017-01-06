@@ -23,14 +23,14 @@ print ("left",65,90)
 print (left,90,90)
 print (fget(left,0),100,90)
 -- test for tile right
-right=mget(p.x/p.w+1,p.x/p.h)
+right=mget(p.x/p.w+1,p.y/p.h)
 print ("right",65,100)
 print (right,90,100)
 print (fget(right,0),100,100)
 -- is hero at home?
 -- leave out var in this example
 print ("hero",65,110)
-print (mget(p.x,p.x),90,110)
+print (mget(p.x,p.y),90,110)
 -- is hero a tile?
 print (fget(mget(p.x,p.y),0),100,110)
 -- returns 0 because hero not flagged
@@ -331,4 +331,3 @@ __music__
 00 41424344
 00 41424344
 00 41424344
-
