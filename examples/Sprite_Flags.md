@@ -2,6 +2,7 @@
 
     fset (sprite,flag)
 eg. 
+
     fset (1,3) -- set flag to 3 (1+2)
 
 | # | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 |
@@ -29,7 +30,9 @@ eg.
 | 255 | o | o | o | o | o | o | o | o |
 
     mset (sprite, flag)
+    
 eg. 
+   
     mset (2,5) -- set flag to 5 (1+4)
 
     if (mset(3,7)) -- if sprite 3 has flag of 7 then true
