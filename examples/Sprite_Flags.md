@@ -7,15 +7,11 @@ eg.
 
     fset (1,3) -- set flag to 3 (1+2)
 
-## MSet
+## FGet
 
-    mset (sprite, flag)
-    
-eg. 
-   
-    mset (2,5) -- set flag to 5 (1+4)
+    result = fget(2) -- get flag of sprite 2
 
-    if (mset(3,7)) -- if sprite 3 has flag of 7 then true
+    if (fget(3,7)) -- if sprite 3 has flag of 7 then true
 
 ## Flag Table
 
@@ -42,14 +38,3 @@ eg.
 | 64 ||||||| o |
 | 128 |||||||| o |
 | 255 | o | o | o | o | o | o | o | o |
-
-# MGet
-
-    mset(1,1,1)
-    cls()
-    map(0,0,0,0,8,8)
-    printh(mget(1,1)) -- print value to console
-    mset(1,1,0) -- change to 0
-    cls()
-    map(0,0,0,0,8,8)
-    printh(mget(1,1)) -- it's changed
