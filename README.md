@@ -4,7 +4,7 @@ Pico-8 Code Recipes
 
 ## My Pico-8 Code Examples
 
-- [Sprite Help](examples/sprite.src.md)
+- [Sprite Help](examples/sprite.src.md) & [Sprite Flags](examples/sprite_flags.md)
 - [Directions Example](examples/directions.src)
 - [Animation Example](examples/animate.src)
 - [Movement Example](examples/movement.src)
