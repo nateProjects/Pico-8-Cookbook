@@ -1,9 +1,24 @@
 # Pico-8 Sprite Flags
 
+## FSet
+
     fset (sprite,flag)
 eg. 
 
     fset (1,3) -- set flag to 3 (1+2)
+
+## MSet
+
+    mset (sprite, flag)
+    
+eg. 
+   
+    mset (2,5) -- set flag to 5 (1+4)
+
+    if (mset(3,7)) -- if sprite 3 has flag of 7 then true
+
+## Flag Table
+
 
 | # | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -27,11 +42,3 @@ eg.
 | 64 ||||||| o |
 | 128 |||||||| o |
 | 255 | o | o | o | o | o | o | o | o |
-
-    mset (sprite, flag)
-    
-eg. 
-   
-    mset (2,5) -- set flag to 5 (1+4)
-
-    if (mset(3,7)) -- if sprite 3 has flag of 7 then true
