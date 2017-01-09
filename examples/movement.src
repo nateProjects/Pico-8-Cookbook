@@ -9,10 +9,12 @@ function _update()
   moving = false
   if btn(0) then
     xcoord -= 1
+      if (xcoord < 1) xcoord = 1 -- if try to go too far left stop
     move() 
   end
   if btn(1) then 
     xcoord += 1
+      if (xcoord > 120) xcoord = 119 -- if try to go too far right stop
     move() 
   end
 end
