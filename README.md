@@ -8,7 +8,7 @@ Pico-8 Code Recipes
 - [Directions Example](examples/directions.src)
 - [Animation Example](examples/animate.src)
 - [Movement Example](examples/movement.src)
-- [Adjacency Example](examples/adjacency.p8)
+- [Adjacency Example](examples/adjacency.p8) & [PrintH Function](examples/printh-adjacent-function.src)
 - [Falling Example](examples/fallplatforms.p8)
 - [Map From Array](examples/mapfromarray.src)
 - [Box Collision](examples/draw_collision.src)
