@@ -42,3 +42,14 @@ eg.
 | 64 ||||||| o |
 | 128 |||||||| o |
 | 255 | o | o | o | o | o | o | o | o |
+
+# MGet
+
+    mset(1,1,1)
+    cls()
+    map(0,0,0,0,8,8)
+    printh(mget(1,1)) -- print value to console
+    mset(1,1,0) -- change to 0
+    cls()
+    map(0,0,0,0,8,8)
+    printh(mget(1,1)) -- it's changed
