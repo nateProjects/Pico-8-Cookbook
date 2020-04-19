@@ -3,11 +3,21 @@ version 7
 __lua__
 -- directions (for input)
 function _update()
-	if (btnp(0)) then print "left" end
-	if (btnp(1)) then print "right" end
- 	if (btnp(2)) then print "up" end
-	if (btnp(3)) then print "down" end
-	if (btnp(4)) then print "z" end
-	if (btnp(5)) then print "x" end
--- would use btn for an action game
-end	
+	-- player 1
+	if (btnp(0)) then print "left (p1)" end -- LEFT
+	if (btnp(1)) then print "right (p1)" end -- RIGHT
+ 	if (btnp(2)) then print "up (p1)" end -- UP
+	if (btnp(3)) then print "down (p1)" end -- DOWN
+	if (btnp(4)) then print "z (p1)" end -- O
+	if (btnp(5)) then print "x (p1)" end -- X
+	
+	-- player 2
+	if (btnp(0, 1)) then print "s (p2)" end -- LEFT
+	if (btnp(1, 1)) then print "f (p2)" end -- RIGHT
+ 	if (btnp(2, 1)) then print "e (p2)" end -- UP
+	if (btnp(3, 1)) then print "d (p2)" end -- DOWN
+	if (btnp(4, 1)) then print "w (p2)" end -- O
+	if (btnp(5, 1)) then print "q (p2)" end -- X
+	
+	-- would use `btn` for an action game
+end
