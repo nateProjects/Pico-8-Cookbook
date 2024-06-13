@@ -2,6 +2,15 @@
 
 Pico-8 Code Recipes
 
+This guide hasn't been updated for a while, and although much of it still applies, there are now other and maybe better resources for learning.
+
+## Pico-8 Development Guides
+
+* [Game Dev With Pico-8](https://mboffin.itch.io/gamedev-with-pico-8-issue1)
+* [Pico-8 Educational Toolset](https://itch.io/c/198419/pico-8-educational-toolset)
+* [Pico-View Guides / Zines](https://nerdyteachers.com/PICO-8/Pico-View/)
+* [Pico FanZine](https://pico-8.fandom.com/wiki/Pico8Zine)
+
 ## My Pico-8 Code Examples
 
 - [Sprite Help](examples/sprite.src.md) & [Sprite Flags](examples/sprite_flags.md)
