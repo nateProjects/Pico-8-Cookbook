@@ -17,13 +17,22 @@ Eg. (a 16x16 sprite facing left)- `spr(1,10,10,2,2,true,false)`
 * flip_x - facing left or right
 * flip_y - facing up or down
 
-### Example 3 - Scale sprite
+### Example 3 - Stretch / scale a sprite region
 
-[Sspr Syntax](http://pico-8.wikia.com/wiki/Sspr)
+`sspr( sx, sy, sw, sh, dx, dy, [dw, dh], [flip_x], [flip_y] )`
 
-See also [ZSpr Function](http://pico-8.wikia.com/wiki/Draw_zoomed_sprite_(zspr))
+Stretches a rectangle of the sprite sheet to a destination rectangle on screen. Coordinates are in pixels.
 
-*Note: Map based sprites start at number ?*
+* `sx, sy` — top-left pixel of the source region on the sprite sheet
+* `sw, sh` — width and height of the source region in pixels
+* `dx, dy` — destination position on screen
+* `dw, dh` — destination size (optional; defaults to `sw, sh` — set these to scale)
+
+Eg. (draw a 16×16 region starting at sprite-sheet pixel 0,0, scaled up to 32×32):
+
+`sspr(0, 0, 16, 16, 10, 10, 32, 32)`
+
+*Note: sprites 0–127 are in the main sprite sheet. Sprites 128–255 share memory with the bottom half of the map — use one or the other, not both.*
 
 ### Example 3 - Change sprite on map - 
 

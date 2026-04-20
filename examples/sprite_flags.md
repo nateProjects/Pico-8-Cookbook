@@ -1,40 +1,76 @@
 # Pico-8 Sprite Flags
 
-## FSet
+Sprite flags are 8 per-sprite boolean values (true/false), indexed **0–7**. They have no built-in meaning — you decide what each one represents (e.g. flag 0 = solid, flag 1 = hazard).
 
-    fset (sprite,flag)
-eg. 
+They can be set in the sprite editor (the coloured dots), or in code.
 
-    fset (1,3) -- set flag to 3 (1+2)
+## FSET — Set a flag
 
-## FGet
+`fset(sprite_num, flag_index, value)`
 
-    result = fget(2) -- get flag of sprite 2
+* `flag_index` — which flag to set: **0 to 7**
+* `value` — `true` or `false`
 
-    if (fget(3,7)) -- if sprite 3 has flag of 7 then true
+```lua
+fset(1, 0, true)   -- set flag 0 on sprite 1 (e.g. mark as solid)
+fset(2, 1, true)   -- set flag 1 on sprite 2 (e.g. mark as hazard)
+fset(1, 0, false)  -- clear flag 0 on sprite 1
+```
 
-## Flag Table
+To set all 8 flags at once using a bitfield:
 
+```lua
+fset(1, 0b00000011)  -- set flags 0 and 1, clear the rest
+fset(2, 1 | 2 | 8)   -- set flags 0, 1 and 3 (bit values 1+2+8=11)
+```
 
-| # | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | o |
-| 2 || o |
-| 3 | o | o |
-| 4 ||| o |
-| 5 | o || o |
-| 6 || o | o |
-| 7 | o | o | o |
-| 8 |||| o |
-| 9 | o |||o |
-| 10 || o || o |
-| 11 | o | o || o |
-| 12 ||| o | o |
-| 13 | o || o | o |
-| 14 || o | o | o |
-| 15 | o | o | o | o |
-| 16 ||||| o |
-| 32 |||||| o |
-| 64 ||||||| o |
-| 128 |||||||| o |
-| 255 | o | o | o | o | o | o | o | o |
+## FGET — Read a flag
+
+`fget(sprite_num, flag_index)` → returns `true` or `false`
+
+```lua
+if fget(tile, 0) then
+  -- tile has flag 0 set (e.g. solid wall)
+end
+```
+
+To read all 8 flags at once as a bitfield:
+
+`fget(sprite_num)` → returns a number (0–255)
+
+```lua
+local flags = fget(1)   -- e.g. 3 means flags 0 and 1 are set
+```
+
+## Flag Index vs Bit Value
+
+When calling `fget`/`fset` **with** an index, use **0–7**:
+
+| Flag index | Bit value |
+|------------|-----------|
+| 0          | 1         |
+| 1          | 2         |
+| 2          | 4         |
+| 3          | 8         |
+| 4          | 16        |
+| 5          | 32        |
+| 6          | 64        |
+| 7          | 128       |
+
+Bit values only matter when reading/writing the whole bitfield (no index argument).
+
+## Practical Example — Tile collision using flags
+
+Set flag 0 in the sprite editor for all solid tiles, then:
+
+```lua
+function is_solid(tx, ty)
+  return fget(mget(tx, ty), 0)
+end
+```
+
+You can also use the `layers` parameter of `map()` to draw only sprites that have a specific flag set:
+
+```lua
+map(0, 0, 0, 0, 128, 64, 0x1)  -- only draw sprites with flag 0 set
+```

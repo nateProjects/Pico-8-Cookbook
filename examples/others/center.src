@@ -24,7 +24,7 @@ function vcenter(s)
 
 -- cut in half and rounded down
 
-return 64-flr(5/2)
+return 64-flr(6/2)
 
 end
 
